@@ -1,10 +1,20 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { DemoModal } from "@/components/DemoModal";
 
 export default function Contact() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col w-full">
       <section className="pt-32 pb-20 bg-[#0B101B]">
@@ -19,31 +29,23 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
               <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">First Name</label>
-                    <Input placeholder="John" className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Last Name</label>
-                    <Input placeholder="Doe" className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Email</label>
-                  <Input type="email" placeholder="john@example.com" className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Phone</label>
-                  <Input type="tel" placeholder="(555) 123-4567" className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Message</label>
-                  <Textarea placeholder="How can we help you?" rows={5} className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400" />
-                </div>
-                <Button type="submit" className="w-full h-12 text-lg">Send Message</Button>
-              </form>
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/CmqJd1fjfw9N6Dkv2Isx"
+                style={{ width: "100%", height: "790px", border: "none", borderRadius: "3px" }}
+                id="inline-CmqJd1fjfw9N6Dkv2Isx"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Website Contact Us Form"
+                data-height="790"
+                data-layout-iframe-id="inline-CmqJd1fjfw9N6Dkv2Isx"
+                data-form-id="CmqJd1fjfw9N6Dkv2Isx"
+                title="Website Contact Us Form"
+              />
             </div>
 
             <div className="space-y-12">
