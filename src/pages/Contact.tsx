@@ -54,7 +54,7 @@ export default function Contact() {
                     <MapPin className="h-6 w-6 text-primary shrink-0" />
                     <div>
                       <h4 className="font-semibold">Headquarters</h4>
-                      <p className="text-slate-600">123 AI Boulevard, Suite 500<br/>Tech City, TC 12345</p>
+                      <p className="text-slate-600">19179 Blanco Rd Ste 105<br/>San Antonio, TX 78258</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
