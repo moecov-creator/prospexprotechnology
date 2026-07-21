@@ -231,14 +231,14 @@ export default function Index() {
       <section className="py-20 bg-white text-slate-900 border-y border-slate-100">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-semibold text-slate-500">Trusted By Businesses Worldwide</h2>
+            <h2 className="text-2xl font-semibold text-slate-500">Built To Help Businesses Grow</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { label: "Businesses Served", value: "10,000+" },
-              { label: "Appointments Booked", value: "5M+" },
-              { label: "Messages Sent", value: "100M+" },
-              { label: "Revenue Generated", value: "$2B+" },
+              { label: "Industries Supported", value: "12+" },
+              { label: "Automations Available", value: "20+" },
+              { label: "Setup Time", value: "24 Hrs" },
+              { label: "Support", value: "24/7" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col gap-2">
                 <span className="text-4xl md:text-5xl font-bold text-primary">{stat.value}</span>
@@ -545,7 +545,7 @@ export default function Index() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 blur-[100px] rounded-full"></div>
         <div className="container relative z-10 text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Ready to Grow With AI?</h2>
-          <p className="text-xl text-muted-foreground mb-10">Join thousands of businesses using Prospex Pro to automate their growth.</p>
+          <p className="text-xl text-muted-foreground mb-10">Join the businesses using Prospex Pro to automate their growth.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <DemoModal>
               <Button size="lg" className="h-14 px-8 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(59,130,246,0.4)]">
