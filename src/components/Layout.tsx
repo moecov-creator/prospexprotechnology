@@ -164,7 +164,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Prospex Pro Technology. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="https://s3.privyr.com/privacy/privacy-policy.html?d=eyJlbWFpbCI6InN1cHBvcnRAcHJvc3BleHByby5jb20iLCJjb21wYW55IjoiUHJvc3BleCBQcm8gVGVjaG5vbG9neSwgTExDIiwiZ2VuX2F0IjoiMjAyNi0wNy0xOFQxNDo0NjoxOS41NjRaIn0=" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
